@@ -171,9 +171,9 @@ function taxableSalary( grossPay ) {
 // console.log(taxableSalary(24000))
 // console.log(calculatePayee(98920))
 
-// Creating a function to calculate payee from the gross pay
+// Creating a function to calculate payee from the taxableSalary
 function calculatePayee(taxableSalary) {
-    // Calculating total tax on gross pay and accumulating in total
+    // Calculating total tax on taxableSalary and accumulating in total
     let totalTax = 0;
     let taxPercentage = 0
     // No Payee if under 24k Ksh
@@ -214,7 +214,7 @@ function calculatePayee(taxableSalary) {
     // First Tax Relief is 15% of NHIF paid
     let nhif = calculateNHIF(taxableSalary)
     let nhifRelief = (nhif * 0.15) + 2400
-    // Personal Relief
+    // Personal Relief on taxable salary
     let personalRelief = 2400
     // Housing Relief
     // 15% of gross pay upto 9000 Ksh a month
