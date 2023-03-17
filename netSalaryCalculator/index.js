@@ -223,7 +223,7 @@ function calculatePayee(taxableSalary) {
     let taxRelief = nhifRelief + personalRelief + housingRelief
     // console.log(taxRelief)
     // Subtracting tax relief from total tax
-    totalTax -= taxRelief
+    // totalTax -= taxRelief
 
     return totalTax
 }
